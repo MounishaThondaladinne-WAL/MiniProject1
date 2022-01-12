@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>E-Commerce APP</title>
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8">
+    <meta name="viewport" content="width=device-width">
+    <style>
+        body {
+            background: linear-gradient(45deg, skyblue, grey, skyblue, grey);
+        }
+        .card-items {
+            border: grey 1px solid;
+            box-shadow: 5px 5px 5px 5px;
+        }
+        article {
+            color: grey
+        }
+    </style>
+</head>
+<body>
+    <div class="fluid-container">
+        <h1 class="text-center" style="color:grey"><i>Find Your Style</i></h1>
+        <div class="row ml-auto mr-auto">
+            <div class="card  col-lg-2 col-md-5 col-sm-8  p-3 m-3 ml-auto mr-auto card-items">
+                <img src="1dress.jpg" class="rounded" />
+                <div class="text-center card-body">
+                    <article id="Name1">A-line Kurta</article>
+                    <p id="Price1">Rs. 1,300</p>
+                    <button class="btn btn-info w-100" onclick="click()" id="button1">Add to cart</button>
+                </div>
+            </div>
+            <div class="card  col-lg-2 col-md-5 col-sm-8  p-3 m-3 ml-auto mr-auto card-items">
+                <img src="2dress.jpg" class="rounded" />
+                <div class="text-center card-body">
+                    <article id="Name2">Printed Kurta</article>
+                    <p id="Price2">Rs. 1,700</p>
+                    <button class="btn btn-info w-100" onclick="click()" id="button2">Add to cart</button>
+                </div>
+            </div>
+            <div class="card  col-lg-2 col-md-5 col-sm-8  p-3 m-3 ml-auto mr-auto card-items">
+                <img src="22dress.jpg" class="rounded" />
+                <div class="text-center card-body">
+                    <article id="Name3">Floral Kurta</article>
+                    <p id="Price3">Rs. 1,100</p>
+                    <button class="btn btn-info w-100" onclick="click()" id="button3">Add to cart</button>
+                </div>
+            </div>
+            <div class="card  col-lg-2 col-md-5 col-sm-8  p-3 m-3 ml-auto mr-auto card-items">
+                <img src="4dress.jpg" class="rounded" />
+                <div class="text-center card-body">
+                    <article id="Name4">Flared Kurta</article>
+                    <p id="Price4">Rs. 1,600</p>
+                    <button class="btn btn-info w-100" onclick="click()" id="button4">Add to cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="row  ml-auto mr-auto">
+            <div class="card  col-lg-2 col-md-5 col-sm-8  p-3 m-3 ml-auto mr-auto card-items">
+                <img src="5dress.jpg" class="rounded" />
+                <div class="text-center card-body">
+                    <article id="Name5">Straight Kurta</article>
+                    <p id="Price5">Rs. 1,900</p>
+                    <button class="btn btn-info w-100" onclick="click()" id="button5">Add to cart</button>
+                </div>
+            </div>
+            <div class="card  col-lg-2 col-md-5 col-sm-8  p-3 m-3 ml-auto mr-auto card-items">
+                <img src="6dress.jpg" class="rounded" />
+                <div class="text-center card-body">
+                    <article id="Name6">Embellished Kurta</article>
+                    <p id="Price6">Rs. 1,200</p>
+                    <button class="btn btn-info w-100" onclick="click()" id="button6">Add to cart</button>
+                </div>
+            </div>
+            <div class="card  col-lg-2 col-md-5 col-sm-8  p-3 m-3 ml-auto mr-auto card-items">
+                <img src="7dress.jpg" class="rounded" />
+                <div class="text-center card-body">
+                    <article id="Name7">Geometric Kurta</article>
+                    <p id="Price7">Rs. 1,400</p>
+                    <button class="btn btn-info w-100" onclick="click()" id="button7">Add to cart</button>
+                </div>
+            </div>
+            <div class="card  col-lg-2 col-md-5 col-sm-8  p-3 m-3 ml-auto mr-auto card-items">
+                <img src="8dress.jpg" class="rounded" />
+                <div class="text-center card-body">
+                    <article id="Name8">Chanderi Kurta</article>
+                    <p id="Price8">Rs. 1,500</p>
+                    <button class="btn btn-info w-100" onclick="click()" id="button8">Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let products_cart = [];
+        function details(name, price) {
+            let productobj = {
+                ProductName: name,
+                ProductPrice: price
+            }
+            products_cart.push(productobj)
+            console.log(products_cart)
+            cnvrttojson = JSON.stringify(products_cart)
+            console.log(products_cart)
+            localStorage.setItem("Items", cnvrttojson)
+        }
+        let onClick = function click() {
+            let y = this.id
+            let val = document.querySelector(`#${y}`)
+            val.textContent = "Remove From Cart"
+            for (let i = 1; i <= 8; i++) {
+                let z = (`button${i}`)
+                if (y == z) {
+                    let A = document.querySelector(`#Name${i}`).textContent
+                    let B = document.querySelector(`#Price${i}`).textContent
+                    details(A, B)
+                }
+            }
+        }
+        document.getElementById("button1").onclick = onClick
+        document.getElementById("button2").onclick = onClick
+        document.getElementById("button3").onclick = onClick
+        document.getElementById("button4").onclick = onClick
+        document.getElementById("button5").onclick = onClick
+        document.getElementById("button6").onclick = onClick
+        document.getElementById("button7").onclick = onClick
+        document.getElementById("button8").onclick = onClick    
+    </script>
+</body>
+</html>
