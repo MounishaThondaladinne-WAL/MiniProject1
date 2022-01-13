@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8">
+    <meta name="viewport" content="width=device-width">
+    <style>
+        body {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container border border-info w-50 text-center p-5 mt-5">
+        <button class="btn btn-primary " onclick="View()">Items in Cart</button>
+        <div id="div1" class="text-break">
+        </div>
+        <p id="total">Total = 0</p>
+    </div>
+    <script>
+        function View() {
+            let divtag = document.querySelector("#div1")
+            let content = (localStorage.getItem("Items"))
+            let cnvrt = JSON.parse(content)
+            let total = 0
+            divtag.textContent = "";
+            for (let i = 0; i < cnvrt.length; i++) {
+                let para = document.createElement('p');
+                for (let j in cnvrt[i]) {
+                    para.textContent = `${para.textContent} ${j}:${cnvrt[i][j]},`
+                    if(j=="ProductPrice"){
+                        let x = cnvrt[i][j]
+                        x=parseInt(x.slice(4))
+                        total += x
+                    }
+                }
+                divtag.appendChild(para);
+            }
+            document.querySelector("#total").textContent = `Total = ${total}`
+        }
+
+    </script>
+</body>
+
+</html>

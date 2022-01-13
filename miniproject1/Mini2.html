@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>E-Commerce APP</title>
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8">
+    <meta name="viewport" content="width=device-width">
+    <style>
+        body {
+            background: linear-gradient(45deg, skyblue, grey, skyblue, grey);
+        }
+
+        .card-items {
+            border: grey 1px solid;
+            box-shadow: 5px 5px 5px 5px;
+        }
+
+        article {
+            color: grey
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fluid-container">
+        <h1 class="text-center" style="color:grey"><b>Find Your Style</b></h1>
+        <div class="row ">
+            <div class="col-12">
+
+                <a class="btn btn-warning col-12 mr-5 " style="float: right; width:210px" href="cart.html"> Cart<svg
+                        xmlns="http://www.w3.org/2000/svg" width="30" height="20" fill="currentColor" class="bi bi-cart"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                    </svg><span class="btn btn-success rounded-circle" style="color:black;" id="num">0</span></a>
+            </div>
+        </div>
+        <div class="row ml-auto mr-auto">
+            <div class="card  col-lg-2 col-md-5 col-sm-8  p-3 m-3 ml-auto mr-auto card-items">
+                <img src="1dress.jpg" class="rounded" d='img1' />
+                <div class="text-center card-body">
+                    <article id="Name1">A-line Kurta</article>
+                    <p id="Price1">Rs. 1300</p>
+                    <button class="btn btn-info w-100 add-cart" onclick="click()" style="font-size:12px;" id="button1">Add to
+                        cart</button>
+                </div>
+            </div>
+            <div class="card  col-lg-2 col-md-5 col-sm-8  p-3 m-3 ml-auto mr-auto card-items">
+                <img src="2dress.jpg" class="rounded" />
+                <div class="text-center card-body">
+                    <article id="Name2">Printed Kurta</article>
+                    <p id="Price2">Rs. 1700</p>
+                    <button class="btn btn-info w-100 add-cart" onclick="click()" style="font-size:12px;" id="button2">Add to
+                        cart</button>
+                </div>
+            </div>
+            <div class="card  col-lg-2 col-md-5 col-sm-8  p-3 m-3 ml-auto mr-auto card-items">
+                <img src="22dress.jpg" class="rounded" />
+                <div class="text-center card-body">
+                    <article id="Name3">Floral Kurta</article>
+                    <p id="Price3">Rs. 1100</p>
+                    <button class="btn btn-info w-100 add-cart" onclick="click()" style="font-size:12px;" id="button3">Add to
+                        cart</button>
+                </div>
+            </div>
+            <div class="card  col-lg-2 col-md-5 col-sm-8  p-3 m-3 ml-auto mr-auto card-items">
+                <img src="4dress.jpg" class="rounded" />
+                <div class="text-center card-body">
+                    <article id="Name4">Flared Kurta</article>
+                    <p id="Price4">Rs. 1600</p>
+                    <button class="btn btn-info w-100 add-cart" onclick="click()" style="font-size:12px;" id="button4">Add to
+                        cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="row  ml-auto mr-auto">
+            <div class="card  col-lg-2 col-md-5 col-sm-8  p-3 m-3 ml-auto mr-auto card-items">
+                <img src="5dress.jpg" class="rounded" />
+                <div class="text-center card-body">
+                    <article id="Name5">Straight Kurta</article>
+                    <p id="Price5">Rs. 1900</p>
+                    <button class="btn btn-info w-100 add-cart" onclick="click()" style="font-size:12px;" id="button5">Add to
+                        cart</button>
+                </div>
+            </div>
+            <div class="card  col-lg-2 col-md-5 col-sm-8  p-3 m-3 ml-auto mr-auto card-items">
+                <img src="6dress.jpg" class="rounded" />
+                <div class="text-center card-body">
+                    <article id="Name6">Embellished Kurta</article>
+                    <p id="Price6">Rs. 1200</p>
+                    <button class="btn btn-info w-100 add-cart" onclick="click()" style="font-size:12px;" id="button6">Add to
+                        cart</button>
+                </div>
+            </div>
+            <div class="card  col-lg-2 col-md-5 col-sm-8  p-3 m-3 ml-auto mr-auto card-items">
+                <img src="7dress.jpg" class="rounded" />
+                <div class="text-center card-body">
+                    <article id="Name7">Geometric Kurta</article>
+                    <p id="Price7">Rs. 1400</p>
+                    <button class="btn btn-info w-100 add-cart" onclick="click()" style="font-size:12px;" id="button7">Add to
+                        cart</button>
+                </div>
+            </div>
+            <div class="card  col-lg-2 col-md-5 col-sm-8  p-3 m-3 ml-auto mr-auto card-items">
+                <img src="8dress.jpg" class="rounded" />
+                <div class="text-center card-body">
+                    <article id="Name8">Chanderi Kurta</article>
+                    <p id="Price8">Rs. 1500</p>
+                    <button class="btn btn-info w-100 add-cart" onclick="click()" style="font-size:12px;" id="button8">Add to
+                        cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let products_cart = [];
+        function details(name, price) {
+            let productobj = {
+                ProductName: name,
+                ProductPrice: price
+            }
+            products_cart.push(productobj)
+            console.log(products_cart)
+            cnvrttojson = JSON.stringify(products_cart)
+            console.log(products_cart)
+            localStorage.setItem("Items", cnvrttojson)
+        }
+        let onClick = function click() {
+            let y = this.id
+            let val = document.querySelector(`#${y}`)
+            val.textContent = "Remove From Cart"
+            for (let i = 1; i <= 8; i++) {
+                let z = (`button${i}`)
+                if (y == z) {
+                    let A = document.querySelector(`#Name${i}`).textContent
+                    let B = document.querySelector(`#Price${i}`).textContent
+                    details(A, B)
+                }
+            }
+        }
+        document.getElementById("button1").onclick = onClick
+        document.getElementById("button2").onclick = onClick
+        document.getElementById("button3").onclick = onClick
+        document.getElementById("button4").onclick = onClick
+        document.getElementById("button5").onclick = onClick
+        document.getElementById("button6").onclick = onClick
+        document.getElementById("button7").onclick = onClick
+        document.getElementById("button8").onclick = onClick
+        let carts = document.querySelectorAll(".add-cart");
+        for (let i = 0; i < carts.length; i++) {
+            carts[i].addEventListener("click", function () {
+                cartnumbers();
+
+            })
+        }
+        function onloadnumbers() {
+            let productNumbers = localStorage.getItem("cartnumbers")
+            if (productNumbers) {
+                document.querySelector("span").textContent = productNumbers
+            }
+        }
+        function cartnumbers() {
+            let productNumbers = localStorage.getItem("cartnumbers")
+            productNumbers = parseInt(productNumbers)
+            if (productNumbers) {
+                localStorage.setItem("cartnumbers", productNumbers + 1)
+                document.querySelector("span").textContent = productNumbers + 1
+            } else {
+                localStorage.setItem("cartnumbers", 1)
+                document.querySelector("span").textContent = 1
+            }
+        }
+
+        onloadnumbers();   
+    </script>
+</body>
+
+</html>
